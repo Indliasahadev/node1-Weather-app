@@ -11,6 +11,9 @@ console.log(path.join(__dirname,'../public'));
 //const forecast = reqclearuire('/home/sahadev/Documents/College/Web/NodeJS/practice/forecast.js')
 const app = express();
 
+//For heroku : PORT from heroku and 3000 is default value 
+const port = process.env.PORT || 3000
+
 //setting path to the required directories for express config
 const viewsPath = path.join(__dirname, "../templates/views")
 const hbsPath = path.join(__dirname,'../templates/partials')
@@ -148,7 +151,7 @@ app.get('*', (req, res) =>{
 
 //to start server up ;
 //common development port 3000
-app.listen(3000, () =>{
+app.listen(port, () =>{
     //this msg will display on terminal ;
-    console.log('Server is up on port 3000');
+    console.log('Server is up on port ' + port);
 });
