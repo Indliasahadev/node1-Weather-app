@@ -12,7 +12,7 @@ forecast.coordinates(process.argv[2], (error, {longitude, latitude, place_name})
             return console.log('error : ' + error);
 
         console.log('Place : ' + place_name);
-        console.log('rain : ' + response.rain + '\ntemperature : ' + response.temperature);
+        //console.log('rain : ' + response.rain + '\ntemperature : ' + response.temperature);
         console.log('Summary : ' + response.summary);
     });
 });

@@ -13,9 +13,11 @@ const fore = (coordinates, callback) =>{
         else{
             const temperature = body.currently.temperature;
             const summary = body.daily.summary;
+            const humidity = body.currently.humidity;
             const rain = body.currently.precipProbability;
+            console.log(body.currently)
             // const forecast = 'Tempareture : ' + temperature + '\nrain : ' + rain;
-            callback(undefined,{temperature,rain,summary});
+            callback(undefined,{temperature,rain,summary,humidity});
         }
     });
 };

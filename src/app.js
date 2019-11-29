@@ -99,7 +99,7 @@ app.get('/weather', (req, res) =>{
         }
         // else if (longitude === )
         //console.log(resp.latitude)
-        forecast.fore([longitude, latitude],(error, {temperature, rain, summary}) =>{
+        forecast.fore([longitude, latitude],(error, {temperature, rain, summary, humidity}) =>{
             if(error){
                 return res.send({
                     error
@@ -109,6 +109,7 @@ app.get('/weather', (req, res) =>{
                 temperature,
                 rain,
                 summary,
+                humidity,
                 place_name : place_name
             })
         })
